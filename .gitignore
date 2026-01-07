@@ -1,3 +1,6 @@
+# Build Output folders
+output/
+
 # Prerequisites
 *.d
 
