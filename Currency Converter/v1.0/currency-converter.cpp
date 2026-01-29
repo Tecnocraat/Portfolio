@@ -6,10 +6,10 @@
  * Handles USD input and guarantees a valid numeric value.
  * This logic is centralized to allow reuse and future extensions.
  */
-void usdInput(double& usdValue) {
+void readUsdAmount(double& usdAmount) {
         std::cout << "Enter an amount in US Dollar (USD): ";
 
-        while (!(std::cin >> usdValue))
+        while (!(std::cin >> usdAmount))
         {
             std::cout << "Invalid input. Please enter a numeric value (e.g., 100.50): ";
             std::cin.clear();
@@ -22,14 +22,14 @@ int main()
     int option = -1;
 
     // Base value used for all conversions
-    double usdValue;
+    double usdAmount;
 
     // Fixed exchange rates (v1.0 scope)
     double brlRate = 5.50;
     double eurRate = 0.92;
 
     // Initial USD value is required before entering the menu
-    usdInput(usdValue);
+    readUsdAmount(usdAmount);
 
     std::cout << std::fixed << std::setprecision(2);
 
@@ -58,15 +58,15 @@ int main()
 
         switch (option) {
             case 1:
-                std::cout << "US Dollar (USD) value: " << usdValue << "\n";
-                std::cout << "Converted to Euro (EUR): " << usdValue * eurRate << "\n";
+                std::cout << "US Dollar (USD) value: " << usdAmount << "\n";
+                std::cout << "Converted to Euro (EUR): " << usdAmount * eurRate << "\n";
                 break;
             case 2:
-                std::cout << "US Dollar (USD) value: " << usdValue << "\n";
-                std::cout << "Converted to Brazilian real (BRL): " << usdValue * brlRate << "\n";
+                std::cout << "US Dollar (USD) value: " << usdAmount << "\n";
+                std::cout << "Converted to Brazilian real (BRL): " << usdAmount * brlRate << "\n";
                 break;
             case 3:
-                usdInput(usdValue); // Allows redefining the base value without restarting the program
+                readUsdAmount(usdAmount); // Allows redefining the base value without restarting the program
                 break;
             case 0:
                 std::cout << "Exiting...\n";
