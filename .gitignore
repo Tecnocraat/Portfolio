@@ -43,3 +43,12 @@
 # Build output directories
 output/
 build/
+
+# Security & environment
+.env
+
+# Scripts & IDE
+.vscode/
+
+# Do NOT ignore the example template
+!.env.example
