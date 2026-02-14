@@ -1,4 +1,4 @@
-# Currency Converter — v1.0 (C++)
+# Currency Converter — Static Logic (v1.0)
 
 Initial version of the **Currency Converter** project, developed in **C++** for console execution.
 
@@ -33,3 +33,4 @@ consistency and facilitate future extensions.
 - **v2.0**: Conversion using real-time exchange rates via external API
 - **v2.1**: Persistence of conversion history and configuration using PostgreSQL
 - **v3.0**: Graphical user interface implemented with Qt
+- **v4.0**: Evolution into a high-performance **HTTP Server** and **RESTful API** using **CrowCpp**, enabling remote clients to access conversion data and history via standardized endpoints.

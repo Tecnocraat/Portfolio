@@ -1,4 +1,4 @@
-# Currency Converter — v2.0 (C++)
+# Currency Converter — Real-time API Exchange Rates (v2.0)
 A professional-grade currency converter developed in C++, focusing on modular architecture, secure credential management, and REST API integration. This project has evolved from a basic script to a robust system following industry-standard design patterns.
 
 ## Features
