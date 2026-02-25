@@ -50,5 +50,16 @@ build/
 # Scripts & IDE
 .vscode/
 
+# vcpkg (Package Manager)
+vcpkg_installed/
+vcpkg-configuration.json
+
+# Visual Studio temporary files
+.vs/
+*.user
+*.sln
+*.vcxproj
+*.filters
+
 # Do NOT ignore the example template
 !.env.example
