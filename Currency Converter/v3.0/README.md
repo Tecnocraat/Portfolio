@@ -27,7 +27,7 @@ A professional desktop application built with **C++** and **QT Framework** that 
 ## Preview
 | Converter Screen | History Screen | About Screen |
 | :---: | :---: | :---: |
-| ![Tela 1](screenshots/Capturar.png) | ![Tela 2](screenshots/Capturar2.png) | ![Tela 3](screenshots/Capturar3.png) |
+| ![Tela 1](screenshots/Capturar.PNG) | ![Tela 2](screenshots/Capturar2.PNG) | ![Tela 3](screenshots/Capturar3.PNG) |
 
 ## Build and Setup
 
