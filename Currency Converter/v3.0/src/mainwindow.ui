@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>441</width>
+    <height>472</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>500</width>
+    <height>1100</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Currency Converter</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Estilo para os Botões do Menu Superior */
+QPushButton#btnConverter, QPushButton#btnDatabase, QPushButton#btnAbout {
+    background-color: #f0f0f0;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    padding: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+QPushButton#btnConverter:hover, QPushButton#btnDatabase:hover, QPushButton#btnAbout:hover {
+    background-color: #e5e5e5;
+}
+
+/* Estilo para o Botão &quot;Convert&quot; (Verde) */
+QPushButton#btnConvert {
+    background-color: #2ecc71;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+QPushButton#btnConvert:hover {
+    background-color: #27ae60;
+}
+
+/* Estilo para os Campos de Entrada */
+QLineEdit, QComboBox {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    background-color: white;
+}
+
+/* Estilo para as Tabelas (Database e About) */
+QTableWidget {
+    background-color: white;
+    alternate-background-color: #f9f9f9;
+    gridline-color: #f0f0f0;
+    border: none;
+    outline: 0;
+}
+
+QHeaderView::section {
+    background-color: #f8f9fa;
+    padding: 4px;
+    border: 1px solid #e0e0e0;
+    font-weight: bold;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="btnConverter">
+        <property name="styleSheet">
+         <string notr="true">/* Estilo normal do botão */
+QPushButton {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 5px;
+}
+
+/* Estilo de quando ele estiver &quot;Checked&quot; (selecionado) */
+QPushButton:checked {
+    background-color: #2ecc71; /* Verde do seu projeto */
+    color: white;
+    font-weight: bold;
+    border-bottom: 3px solid #27ae60;
+}</string>
+        </property>
+        <property name="text">
+         <string>Converter</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnDatabase">
+        <property name="styleSheet">
+         <string notr="true">/* Estilo normal do botão */
+QPushButton {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 5px;
+}
+
+/* Estilo de quando ele estiver &quot;Checked&quot; (selecionado) */
+QPushButton:checked {
+    background-color: #2ecc71; /* Verde do seu projeto */
+    color: white;
+    font-weight: bold;
+    border-bottom: 3px solid #27ae60;
+}</string>
+        </property>
+        <property name="text">
+         <string>Database</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnAbout">
+        <property name="styleSheet">
+         <string notr="true">/* Estilo normal do botão */
+QPushButton {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 5px;
+}
+
+/* Estilo de quando ele estiver &quot;Checked&quot; (selecionado) */
+QPushButton:checked {
+    background-color: #2ecc71; /* Verde do seu projeto */
+    color: white;
+    font-weight: bold;
+    border-bottom: 3px solid #27ae60;
+}</string>
+        </property>
+        <property name="text">
+         <string>About</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="pageConverter">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLineEdit" name="editAmount">
+          <property name="inputMask">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+          <property name="placeholderText">
+           <string>Set a value</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QComboBox" name="comboFrom"/>
+          </item>
+          <item alignment="Qt::AlignmentFlag::AlignHCenter">
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string> →</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboTo"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnSwap">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset theme="QIcon::ThemeIcon::SyncSynchronizing"/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnConvert">
+          <property name="text">
+           <string>Convert</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblResult">
+          <property name="font">
+           <font>
+            <pointsize>25</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>0.00</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="pageAbout">
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QTableWidget" name="tableAbout">
+          <property name="maximumSize">
+           <size>
+            <width>350</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LayoutDirection::LeftToRight</enum>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Shape::NoFrame</enum>
+          </property>
+          <property name="rowCount">
+           <number>5</number>
+          </property>
+          <property name="columnCount">
+           <number>2</number>
+          </property>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <row>
+           <property name="text">
+            <string/>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string/>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string/>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string/>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string/>
+           </property>
+          </row>
+          <column>
+           <property name="text">
+            <string>Properties</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Value</string>
+           </property>
+          </column>
+          <item row="0" column="0">
+           <property name="text">
+            <string>Name:</string>
+           </property>
+          </item>
+          <item row="0" column="1">
+           <property name="text">
+            <string>Currency Converter</string>
+           </property>
+          </item>
+          <item row="1" column="0">
+           <property name="text">
+            <string>Version:</string>
+           </property>
+          </item>
+          <item row="1" column="1">
+           <property name="text">
+            <string>3.0</string>
+           </property>
+          </item>
+          <item row="2" column="0">
+           <property name="text">
+            <string>Developer:</string>
+           </property>
+          </item>
+          <item row="2" column="1">
+           <property name="text">
+            <string>Romeu Santos Souza</string>
+           </property>
+          </item>
+          <item row="3" column="0">
+           <property name="text">
+            <string>Technologies:</string>
+           </property>
+          </item>
+          <item row="3" column="1">
+           <property name="text">
+            <string>C++; Qt; PostgreSQL; Curl; nlohmann;</string>
+           </property>
+          </item>
+          <item row="4" column="0">
+           <property name="text">
+            <string>Adress: </string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="pageDatabase">
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QTableWidget" name="tableHistory">
+          <column>
+           <property name="text">
+            <string>Conversion</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Input Amount</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Exchange Rate</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Final Result</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
