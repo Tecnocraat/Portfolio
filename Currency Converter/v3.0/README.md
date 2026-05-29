@@ -36,10 +36,13 @@ A professional desktop application built with **C++** and **QT Framework** that 
 2. **PostgreSQL** server running and configured locally.
 3. **C++ Package Manager** (such as **vcpkg**) to handle third-party dependencies.
 
-### Dependencies
-This project relies on the following packages. If you are using **vcpkg**, you can install them by running:
-    ```bash
-    vcpkg install libpqxx libcurl nlohmann-json
+Dependencies
+
+This project relies on the following packages. If you are using vcpkg, you can install them by running:
+
+```bash
+vcpkg install libpqxx libcurl nlohmann-json
+```
 
 Note: Ensure your CMake toolchain is pointing to your vcpkg installation so the dependencies are discovered automatically during configuration.
 
