@@ -38,7 +38,6 @@ A professional desktop application built with **C++** and **QT Framework** that 
 
 ### Dependencies
 This project relies on the following packages. If you are using **vcpkg**, you can install them by running:
-
     ```bash
     vcpkg install libpqxx libcurl nlohmann-json
 

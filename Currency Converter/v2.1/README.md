@@ -32,4 +32,3 @@ A professional-grade currency converter developed in C++, now featuring persiste
 
 ## Planned Evolution
 - **v3.0**: Graphical user interface implemented with **Qt Framework**
-- **v4.0**: Evolution into a high-performance **HTTP Server** and **RESTful API** using **CrowCpp**, enabling remote clients to access conversion data and history via standardized endpoints.

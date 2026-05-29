@@ -32,4 +32,3 @@ A professional-grade currency converter developed in C++, focusing on modular ar
 ## Planned Evolution
 - **v2.1**: Persistence of conversion history and configuration using **PostgreSQL**
 - **v3.0**: Graphical user interface implemented with **Qt**
-- **v4.0**: Evolution into a high-performance **HTTP Server** and **RESTful API** using **CrowCpp**, enabling remote clients to access conversion data and history via standardized endpoints.
