@@ -1,7 +1,7 @@
-# Currency Converter — QT Graphical User Interface (v3.0)
+# 💱 Currency Converter — QT Graphical User Interface (v3.0)
 A professional desktop application built with **C++** and **QT Framework** that provides real-time currency conversion, data persistence, and a sleek user interface.
 
-## Features
+## 🚀 Features
 - **UI/UX Polishing:** Dynamic page navigation using `QStackedWidget`. 🆕
     - Swap functionality to quickly invert currencies.
     - Responsive tables for conversion history.
@@ -9,7 +9,7 @@ A professional desktop application built with **C++** and **QT Framework** that 
 - **Intelligent Caching:** Local data structure to minimize API calls and improve performance.
 - **Secure Credential Handling**: Support for `.env` files to protect both API keys and database credentials.
 
-## Used Technologies
+## 🛠️ Used Technologies
 - **Language:** C++.
 - **Framework:** QT 6.x. 🆕
 - **Database:** PostgreSQL.
@@ -18,25 +18,25 @@ A professional desktop application built with **C++** and **QT Framework** that 
 - **Data parsing:** Nlohmann/json.
 - **Tools:** Git, IcoConvert.
 
-## Technical Observations
+## 🔍 Technical Observations
 - The `Conversion` field in the History Table is a **derived field**, created by concatenating the base and target currencies (e.g., USD → BRL) to enhance UI readability. 🆕
 - To ensure technical stability, the **Database Manager** utilizes a specific pointer-based connection lifecycle. This approach was implemented to prevent memory corruption and crashes between the `libpqxx` connector and the Qt Event Loop, resulting in a robust asynchronous-like data persistence. 🆕
 - **Visual Fidelity (High DPI)**: Native support via Qt 6 ensures that fonts and custom icons remain sharp and clear on high-resolution displays (4K/Retina), regardless of Windows scaling settings. 🆕
 - **Workflow-Centric UI**: The app features a constrained width (500px). This strategic UX choice allows it to sit side-by-side with other applications, eliminating the need for constant `Alt+Tab` during multitasking. 🆕
 
-## Preview
+## 🖼️ Preview
 | Converter Screen | History Screen | About Screen |
 | :---: | :---: | :---: |
 | ![Tela 1](screenshots/Capturar.PNG) | ![Tela 2](screenshots/Capturar2.PNG) | ![Tela 3](screenshots/Capturar3.PNG) |
 
-## Build and Setup
+## ⚙️ Build and Setup
 
 ### Prerequisites
 1. **Qt 6.x** Framework installed.
 2. **PostgreSQL** server running and configured locally.
 3. **C++ Package Manager** (such as **vcpkg**) to handle third-party dependencies.
 
-Dependencies
+### Dependencies
 
 This project relies on the following packages. If you are using vcpkg, you can install them by running:
 

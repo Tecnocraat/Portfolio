@@ -4,7 +4,7 @@ Welcome to the **Currency Converter** portfolio ecosystem. This project was buil
 
 ---
 
-## Project Roadmap & Evolution
+## 🗺️ Project Roadmap & Evolution
 
 Here is the breakdown of how the application evolved. Click on each version to explore its dedicated documentation and source code:
 
